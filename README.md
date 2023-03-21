@@ -1,6 +1,8 @@
 # STAMMER 2
 A version of STAMMER that allows you to manually give it an amount of time for each frame to take. 
 
+In every way aside from those described below, it functions the same as STAMMER
+
 
 ## Instructions
 
@@ -10,7 +12,7 @@ STAMMER2 can be run from the command line with the command
 python stammer2.py <carrier track> <modulator track> <output file> <frame length>
 ```
 
-where `<carrier track>` is the path to an audio or video file that frames will be taken from (i.e. Steamed Hams in the above example), `<modulator track>` is the path to an audio or video file that will be reconstructed using the carrier track, `<output file>` is a path to file that will be written to. `<output file>` should have an audio or video file extension (such as `.wav`, `.mp3`, `.mp4`, etc), and <frame length> is the desired time of the audio divisions in seconds. 
+where `<carrier track>` is the path to an audio or video file that frames will be taken from (i.e. Steamed Hams in the above example), `<modulator track>` is the path to an audio or video file that will be reconstructed using the carrier track, `<output file>` is a path to file that will be written to. `<output file>` should have an audio or video file extension (such as `.wav`, `.mp3`, `.mp4`, etc), and <frame length> is the desired time of the audio divisions in seconds. If <frame length> is 0, it will behave like normal STAMMER
 
 ### Pure Audio
 When working with audio, you give a value in seconds (0.04 for 1/25th of a second, etc) and the audio will be will be divided up into sections of that size.
