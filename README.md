@@ -1,3 +1,25 @@
+# STAMMER 2
+A version of STAMMER that allows you to manually give it an amount of time for each frame to take. 
+
+
+## Instructions
+
+STAMMER2 can be run from the command line with the command
+
+```sh
+python stammer2.py <carrier track> <modulator track> <output file> <frame length>
+```
+
+where `<carrier track>` is the path to an audio or video file that frames will be taken from (i.e. Steamed Hams in the above example), `<modulator track>` is the path to an audio or video file that will be reconstructed using the carrier track, `<output file>` is a path to file that will be written to. `<output file>` should have an audio or video file extension (such as `.wav`, `.mp3`, `.mp4`, etc), and <frame length> is the desired time of the audio divisions in seconds. 
+
+### Pure Audio
+When working with audio, you give a value in seconds (0.04 for 1/25th of a second, etc) and the audio will be will be divided up into sections of that size.
+
+### Video
+When working with videos, the number put in will be used to generate an integer number of frames. This will always round up, so if there are 30 frames per second, a value of 0.04 will round to 2 frames, or 0.0667 seconds. 
+
+
+
 # STeAMed haM-ifiER (STAMMER)
 
 If you re-arranged the frames of [Steamed Hams](https://www.youtube.com/watch?v=4jXEuIHY9ic) in the right order, could you produce the [FitnessGram Pacer Test](https://www.youtube.com/watch?v=Y82jDHRrswc)?
